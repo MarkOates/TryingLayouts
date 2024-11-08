@@ -50,6 +50,14 @@ properties:
     type: AllegroFlare::Layouts::Layout
     init_with: '{}'
 
+  - name: layout_cursor_selection_box
+    type: AllegroFlare::Elements::SelectionCursorBox
+    init_with: '{}'
+
+  - name: current_cursor_destination
+    type: AllegroFlare::Layouts::Elements::CursorDestination*
+    init_with: nullptr
+
   - name: current_level_identifier
     type: std::string
     init_with: '"[unset-current_level]"'
@@ -98,10 +106,86 @@ methods:
       layout.set_scale(1);
       layout.initialize();
 
+
+
       initialized = true;
       return;
     body_dependency_symbols:
       - al_is_primitives_addon_initialized
+
+
+  - name: move_cursor_to
+    parameters:
+      - name: target_tmj_object_id
+        type: int
+        default_argument: 0
+    body: |
+      AllegroFlare::Layouts::Elements::CursorDestination *next_destination =
+         //cursor_map.
+         layout.find_cursor_destination_by_tmj_object_id(target_tmj_object_id);
+      if (target_tmj_object_id == 0)
+      {
+         // Nothing
+         // TODO: Consider >boop< sound or unmoving cursor animation
+      }
+      else
+      {
+         if (current_cursor_destination && current_cursor_destination->on_blur)
+         {
+            current_cursor_destination->on_blur();
+         }
+
+         current_cursor_destination = next_destination;
+
+         if (current_cursor_destination && current_cursor_destination->on_focus)
+         {
+            current_cursor_destination->on_focus();
+         }
+
+         set_selection_cursor_box_to_new_position();
+      }
+      return;
+
+
+  - name: move_cursor_up
+    body: |
+      int next_id = current_cursor_destination->move_up_to_target_tmj_object_id;
+      move_cursor_to(next_id);
+      return;
+
+
+  - name: move_cursor_down
+    body: |
+      int next_id = current_cursor_destination->move_down_to_target_tmj_object_id;
+      move_cursor_to(next_id);
+      return;
+
+
+  - name: move_cursor_left
+    body: |
+      int next_id = current_cursor_destination->move_left_to_target_tmj_object_id;
+      move_cursor_to(next_id);
+      return;
+
+
+  - name: move_cursor_right
+    body: |
+      int next_id = current_cursor_destination->move_right_to_target_tmj_object_id;
+      move_cursor_to(next_id);
+      return;
+
+
+  - name: set_selection_cursor_box_to_new_position
+    body: |
+      layout_cursor_selection_box.reposition_to(
+         current_cursor_destination->x,
+         current_cursor_destination->y
+      );
+      layout_cursor_selection_box.resize_to(
+         current_cursor_destination->width,
+         current_cursor_destination->height
+      );
+      return;
 
 
   - name: load_level_by_identifier
@@ -327,5 +411,9 @@ dependencies:
     headers: [ AllegroFlare/Layouts/Layout.hpp ]
   - symbol: AllegroFlare::Camera2D
     headers: [ AllegroFlare/Camera2D.hpp ]
+  - symbol: AllegroFlare::Elements::SelectionCursorBox
+    headers: [ AllegroFlare/Elements/SelectionCursorBox.hpp ]
+  - symbol: AllegroFlare::Layouts::Elements::CursorDestination
+    headers: [ AllegroFlare/Layouts/Elements/CursorDestination.hpp ]
 
 

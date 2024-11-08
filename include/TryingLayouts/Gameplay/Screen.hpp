@@ -4,9 +4,11 @@
 #include <AllegroFlare/AssetStudio/Database.hpp>
 #include <AllegroFlare/BitmapBin.hpp>
 #include <AllegroFlare/Camera2D.hpp>
+#include <AllegroFlare/Elements/SelectionCursorBox.hpp>
 #include <AllegroFlare/EventEmitter.hpp>
 #include <AllegroFlare/FontBin.hpp>
 #include <AllegroFlare/GameEvent.hpp>
+#include <AllegroFlare/Layouts/Elements/CursorDestination.hpp>
 #include <AllegroFlare/Layouts/Layout.hpp>
 #include <AllegroFlare/ModelBin.hpp>
 #include <AllegroFlare/Player.hpp>
@@ -36,6 +38,8 @@ namespace TryingLayouts
          AllegroFlare::ModelBin* model_bin;
          AllegroFlare::Camera2D layout_camera_2d;
          AllegroFlare::Layouts::Layout layout;
+         AllegroFlare::Elements::SelectionCursorBox layout_cursor_selection_box;
+         AllegroFlare::Layouts::Elements::CursorDestination* current_cursor_destination;
          std::string current_level_identifier;
          TryingLayouts::Gameplay::Level* current_level;
          bool initialized;
@@ -58,6 +62,12 @@ namespace TryingLayouts
          bool get_initialized() const;
          AllegroFlare::AssetStudio::Database* &get_asset_studio_database_ref();
          void initialize();
+         void move_cursor_to(int target_tmj_object_id=0);
+         void move_cursor_up();
+         void move_cursor_down();
+         void move_cursor_left();
+         void move_cursor_right();
+         void set_selection_cursor_box_to_new_position();
          virtual bool load_level_by_identifier(std::string level_identifier="[unset-level_identifier]") override;
          virtual void on_activate() override;
          virtual void on_deactivate() override;

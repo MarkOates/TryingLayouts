@@ -365,6 +365,14 @@ table td
   <td class="property">AllegroFlare::Layouts::Layout</td>
 </tr>
 <tr>
+  <td class="property">layout_cursor_selection_box</td>
+  <td class="property">AllegroFlare::Elements::SelectionCursorBox</td>
+</tr>
+<tr>
+  <td class="property">current_cursor_destination</td>
+  <td class="property">AllegroFlare::Layouts::Elements::CursorDestination*</td>
+</tr>
+<tr>
   <td class="property">current_level_identifier</td>
   <td class="property">std::string</td>
 </tr>
@@ -390,6 +398,30 @@ table td
 <tr>
   <td class="method">void</td>
   <td class="method"><b>initialize</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_to</b>(int target_tmj_object_id=0)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_up</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_down</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_left</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_right</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>set_selection_cursor_box_to_new_position</b>()</td>
 </tr>
 <tr>
   <td class="method">bool</td>
@@ -492,6 +524,12 @@ table td
 </tr>
 <tr>
   <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Camera2D&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Camera2D.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Elements::SelectionCursorBox&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Elements/SelectionCursorBox.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Layouts::Elements::CursorDestination&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Layouts/Elements/CursorDestination.hpp&quot;]}</td>
 </tr>
     </table>
 </div>  </div>
@@ -617,6 +655,12 @@ table td
     "TryingLayouts/Gameplay/Screen"
   ],
   "AllegroFlare/Camera2D": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Elements/SelectionCursorBox": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Layouts/Elements/CursorDestination": [
     "TryingLayouts/Gameplay/Screen"
   ]
 }

@@ -26,6 +26,8 @@ Screen::Screen()
    , model_bin(nullptr)
    , layout_camera_2d({})
    , layout({})
+   , layout_cursor_selection_box({})
+   , current_cursor_destination(nullptr)
    , current_level_identifier("[unset-current_level]")
    , current_level(nullptr)
    , initialized(false)
@@ -170,7 +172,79 @@ void Screen::initialize()
    layout.set_scale(1);
    layout.initialize();
 
+
+
    initialized = true;
+   return;
+}
+
+void Screen::move_cursor_to(int target_tmj_object_id)
+{
+   AllegroFlare::Layouts::Elements::CursorDestination *next_destination =
+      //cursor_map.
+      layout.find_cursor_destination_by_tmj_object_id(target_tmj_object_id);
+   if (target_tmj_object_id == 0)
+   {
+      // Nothing
+      // TODO: Consider >boop< sound or unmoving cursor animation
+   }
+   else
+   {
+      if (current_cursor_destination && current_cursor_destination->on_blur)
+      {
+         current_cursor_destination->on_blur();
+      }
+
+      current_cursor_destination = next_destination;
+
+      if (current_cursor_destination && current_cursor_destination->on_focus)
+      {
+         current_cursor_destination->on_focus();
+      }
+
+      set_selection_cursor_box_to_new_position();
+   }
+   return;
+}
+
+void Screen::move_cursor_up()
+{
+   int next_id = current_cursor_destination->move_up_to_target_tmj_object_id;
+   move_cursor_to(next_id);
+   return;
+}
+
+void Screen::move_cursor_down()
+{
+   int next_id = current_cursor_destination->move_down_to_target_tmj_object_id;
+   move_cursor_to(next_id);
+   return;
+}
+
+void Screen::move_cursor_left()
+{
+   int next_id = current_cursor_destination->move_left_to_target_tmj_object_id;
+   move_cursor_to(next_id);
+   return;
+}
+
+void Screen::move_cursor_right()
+{
+   int next_id = current_cursor_destination->move_right_to_target_tmj_object_id;
+   move_cursor_to(next_id);
+   return;
+}
+
+void Screen::set_selection_cursor_box_to_new_position()
+{
+   layout_cursor_selection_box.reposition_to(
+      current_cursor_destination->x,
+      current_cursor_destination->y
+   );
+   layout_cursor_selection_box.resize_to(
+      current_cursor_destination->width,
+      current_cursor_destination->height
+   );
    return;
 }
 

@@ -118,5 +118,11 @@
   ],
   "AllegroFlare/Camera2D": [
     "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Elements/SelectionCursorBox": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Layouts/Elements/CursorDestination": [
+    "TryingLayouts/Gameplay/Screen"
   ]
 }

@@ -84,3 +84,52 @@ TEST_F(TryingLayouts_Gameplay_ScreenTestWithAllegroFrameworksFullFixture,
 }
 
 
+
+/*
+
+   void move_cursor_up(AllegroFlare::Layouts::Layout &cursor_map)
+   {
+      int next_id = current_cursor_destination->move_up_to_target_tmj_object_id;
+      move_cursor_to(cursor_map, next_id);
+   }
+
+   void move_cursor_down(AllegroFlare::Layouts::Layout &cursor_map)
+   {
+      int next_id = current_cursor_destination->move_down_to_target_tmj_object_id;
+      move_cursor_to(cursor_map, next_id);
+   }
+
+   void move_cursor_left(AllegroFlare::Layouts::Layout &cursor_map)
+   {
+      int next_id = current_cursor_destination->move_left_to_target_tmj_object_id;
+      move_cursor_to(cursor_map, next_id);
+   }
+
+   void move_cursor_right(AllegroFlare::Layouts::Layout &cursor_map)
+   {
+      int next_id = current_cursor_destination->move_right_to_target_tmj_object_id;
+      move_cursor_to(cursor_map, next_id);
+   }
+
+   void activate_current_cursor_selection()
+   {
+      // TODO: Assert current_cursor_destination
+      if (current_cursor_destination->on_activation) current_cursor_destination->on_activation();
+
+      // TODO: Possibly some custom behavior would be here if it fit the design
+   }
+
+   void set_selection_cursor_box_to_new_position()
+   {
+      selection_cursor_box.reposition_to(
+         current_cursor_destination->x,
+         current_cursor_destination->y
+      );
+      selection_cursor_box.resize_to(
+         current_cursor_destination->width,
+         current_cursor_destination->height
+      );
+   }
+
+*/
+
