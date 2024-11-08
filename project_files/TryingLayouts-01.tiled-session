@@ -3,16 +3,27 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj",
     "expandedProjectPaths": [
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj": {
+            "scale": 0.2154,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2516.2488393686162,
+                "y": 1474.0018570102136
+            }
+        }
     },
     "map.lastUsedFormat": "json",
     "openFiles": [
+        "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj"
     ],
     "project": "TryingLayouts-01.tiled-project",
     "property.type": "object",
     "recentFiles": [
+        "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj"
     ]
 }
