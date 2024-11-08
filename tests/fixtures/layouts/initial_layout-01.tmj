@@ -356,7 +356,7 @@
                          "value":15
                         }],
                  "rotation":0,
-                 "type":"cursor_destinations",
+                 "type":"cursor_destination",
                  "visible":true,
                  "width":384,
                  "x":384,
@@ -378,7 +378,7 @@
                          "value":14
                         }],
                  "rotation":0,
-                 "type":"cursor_destinations",
+                 "type":"cursor_destination",
                  "visible":true,
                  "width":384,
                  "x":384,
@@ -400,7 +400,7 @@
                          "value":15
                         }],
                  "rotation":0,
-                 "type":"cursor_destinations",
+                 "type":"cursor_destination",
                  "visible":true,
                  "width":576,
                  "x":3072,
@@ -422,7 +422,7 @@
                          "value":25
                         }],
                  "rotation":0,
-                 "type":"cursor_destinations",
+                 "type":"cursor_destination",
                  "visible":true,
                  "width":576,
                  "x":3072,
@@ -439,7 +439,7 @@
                          "value":26
                         }],
                  "rotation":0,
-                 "type":"cursor_destinations",
+                 "type":"cursor_destination",
                  "visible":true,
                  "width":576,
                  "x":3072,

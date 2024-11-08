@@ -172,7 +172,9 @@ void Screen::initialize()
    layout.set_scale(1);
    layout.initialize();
 
-
+   // Setup the cursor to the initial position
+   current_cursor_destination = layout.get_initial_cursor_destination();
+   set_selection_cursor_box_to_new_position();
 
    initialized = true;
    return;
@@ -284,12 +286,13 @@ void Screen::update()
 {
    //layout.update(); // Update on a layout?
    static int counter = 0;
-   counter++;
-   if (counter > 50)
-   {
-      layout_camera_2d.position.x -= 1920.0;
-      counter = 0;
-   }
+   //counter++;
+   //if (counter > 50)
+   //{
+      //layout_camera_2d.position.x -= 1920.0;
+      //counter = 0;
+   //}
+   layout_cursor_selection_box.update();
    return;
 }
 
@@ -299,6 +302,7 @@ void Screen::render()
 
    layout_camera_2d.start_transform();
    layout.render();
+   layout_cursor_selection_box.render();
    layout_camera_2d.restore_transform();
    return;
 }
@@ -369,15 +373,21 @@ void Screen::virtual_control_button_down_func(AllegroFlare::Player* player, Alle
    using namespace AllegroFlare;
    //if (!is_processing_user_input()) return;
 
+   if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_UP)
+   {
+      move_cursor_up();
+   }
+   if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_DOWN)
+   {
+      move_cursor_down();
+   }
    if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_RIGHT)
    {
-      //player_velocity.x = 1;
-      //chapter_select_element.rotate_carousel_right();
+      move_cursor_right();
    }
    if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_LEFT)
    {
-      //player_velocity.x = -1;
-      //chapter_select_element.rotate_carousel_left();
+      move_cursor_left();
    }
    if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_A
       || virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_MENU

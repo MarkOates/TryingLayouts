@@ -36,7 +36,7 @@
                     "value": 0
                 }
             ],
-            "name": "cursor_destinations",
+            "name": "cursor_destination",
             "type": "class",
             "useAs": [
                 "property",
