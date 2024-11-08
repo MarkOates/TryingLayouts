@@ -370,7 +370,7 @@
                 {
                  "height":108,
                  "id":15,
-                 "name":"",
+                 "name":"exit_game",
                  "properties":[
                         {
                          "name":"move_up_to_target_id",
