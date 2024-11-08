@@ -36,16 +36,16 @@
                          "y":0
                         }, 
                         {
-                         "x":-160,
+                         "x":-192,
                          "y":0
                         }, 
                         {
-                         "x":-320,
-                         "y":1088
+                         "x":-384,
+                         "y":1080
                         }, 
                         {
-                         "x":16,
-                         "y":1088
+                         "x":0,
+                         "y":1080
                         }],
                  "properties":[
                         {
@@ -66,19 +66,19 @@
                  "name":"",
                  "polygon":[
                         {
-                         "x":0,
+                         "x":-96,
                          "y":0
                         }, 
                         {
-                         "x":-224,
-                         "y":1088
+                         "x":-480,
+                         "y":1080
                         }, 
                         {
-                         "x":-32,
-                         "y":1088
+                         "x":-96,
+                         "y":1080
                         }, 
                         {
-                         "x":128,
+                         "x":96,
                          "y":0
                         }],
                  "properties":[
@@ -100,19 +100,19 @@
                  "name":"",
                  "polygon":[
                         {
-                         "x":0,
+                         "x":-192,
                          "y":0
                         }, 
                         {
-                         "x":-320,
-                         "y":1088
+                         "x":-768,
+                         "y":1080
                         }, 
                         {
-                         "x":-128,
-                         "y":1088
+                         "x":-384,
+                         "y":1080
                         }, 
                         {
-                         "x":96,
+                         "x":0,
                          "y":0
                         }],
                  "properties":[
@@ -220,6 +220,59 @@
                  "width":0,
                  "x":1920,
                  "y":0
+                }, 
+                {
+                 "height":108,
+                 "id":21,
+                 "name":"world_2_text",
+                 "rotation":0,
+                 "text":
+                    {
+                     "color":"#00fdff",
+                     "fontfamily":"Inter",
+                     "pixelsize":80,
+                     "text":"World 2",
+                     "wrap":true
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":384,
+                 "x":4032,
+                 "y":108
+                }, 
+                {
+                 "height":0,
+                 "id":22,
+                 "name":"",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0,
+                         "y":432
+                        }, 
+                        {
+                         "x":1920,
+                         "y":324
+                        }, 
+                        {
+                         "x":1920,
+                         "y":0
+                        }],
+                 "properties":[
+                        {
+                         "name":"fill_color",
+                         "type":"color",
+                         "value":"#ff7a81ff"
+                        }],
+                 "rotation":0,
+                 "type":"shape",
+                 "visible":true,
+                 "width":0,
+                 "x":3840,
+                 "y":0
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -273,7 +326,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":21,
+ "nextobjectid":23,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

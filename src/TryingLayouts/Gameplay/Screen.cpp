@@ -209,7 +209,13 @@ void Screen::on_deactivate()
 void Screen::update()
 {
    //layout.update(); // Update on a layout?
-   layout_camera_2d.position.x -= 2.0;
+   static int counter = 0;
+   counter++;
+   if (counter > 50)
+   {
+      layout_camera_2d.position.x -= 1920.0;
+      counter = 0;
+   }
    return;
 }
 
