@@ -1,0 +1,122 @@
+{
+  "AllegroFlare/GameConfigurations/Complete": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/Levels/Base": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/Gameplay/Level"
+  ],
+  "AllegroFlare/DialogTree/NodeBank": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/NodeBankFactory": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/Nodes/Wait": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/Nodes/ExitProgram": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/Nodes/MultipageWithOptions": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/NodeOptions/GoToNode": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/DialogTree/NodeOptions/ExitDialog": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "TryingLayouts/Gameplay/Level": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Achievement": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/Elements/StoryboardPages/Base": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/GameSession": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/GameProgressAndStateInfos/Base": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/GameProgressAndStateInfo"
+  ],
+  "AllegroFlare/LoadASavedGame/SaveSlots/Base": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "TryingLayouts/Gameplay/Screen": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Screens/Gameplay": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Runners/Complete": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/AudioController": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/EventNames": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/GameEventDatas/AchievementUnlocked": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/GameEvent": [
+    "TryingLayouts/Game/Configurations/Main",
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Screens/PauseScreen": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "AllegroFlare/Screens/Subscreen/Screen": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
+  "TryingLayouts/JSONLoaders/TryingLayouts/GameProgressAndStateInfo": [
+    "TryingLayouts/GameProgressAndStateInfo"
+  ],
+  "ALLEGRO_FONT": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "ALLEGRO_EVENT": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/BitmapBin": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/EventEmitter": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/FontBin": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/ModelBin": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "al_is_primitives_addon_initialized": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Player": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/VirtualControllers/Base": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/VirtualControllers/GenericController": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/AssetStudio/Database": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Layouts/Layout": [
+    "TryingLayouts/Gameplay/Screen"
+  ],
+  "AllegroFlare/Camera2D": [
+    "TryingLayouts/Gameplay/Screen"
+  ]
+}

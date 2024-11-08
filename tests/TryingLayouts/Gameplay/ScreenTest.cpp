@@ -68,13 +68,14 @@ TEST_F(TryingLayouts_Gameplay_ScreenTest, type__has_the_expected_value_matching_
 */
 
 TEST_F(TryingLayouts_Gameplay_ScreenTestWithAllegroFrameworksFullFixture,
-   TIMED_INTERACTIVE__will_run_as_expected)
+   CAPTURE__TIMED_INTERACTIVE__will_run_as_expected)
 {
    TryingLayouts::Gameplay::Screen screen;
    screen.set_event_emitter(get_framework_event_emitter());
    screen.set_bitmap_bin(get_framework_bitmap_bin());
    screen.set_font_bin(get_framework_font_bin());
    screen.set_model_bin(get_framework_model_bin());
+   screen.set_data_folder_path(get_framework_data_folder_path());
    screen.initialize();
 
    framework_register_and_activate_screen("screen", &screen);

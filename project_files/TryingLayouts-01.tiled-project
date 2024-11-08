@@ -1,0 +1,79 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 3,
+            "members": [
+                {
+                    "name": "move_down_to_target_id",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "move_left_to_target_id",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "move_right_to_target_id",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "move_up_to_target_id",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "cursor_destinations",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 2,
+            "members": [
+                {
+                    "name": "fill_color",
+                    "type": "color",
+                    "value": ""
+                }
+            ],
+            "name": "shape",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        }
+    ]
+}
