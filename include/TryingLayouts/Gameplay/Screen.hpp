@@ -62,6 +62,7 @@ namespace TryingLayouts
          bool get_initialized() const;
          AllegroFlare::AssetStudio::Database* &get_asset_studio_database_ref();
          void initialize();
+         void wire_up_cursor_destination_activation_behavior();
          void move_cursor_to(int target_tmj_object_id=0);
          void move_cursor_up();
          void move_cursor_down();

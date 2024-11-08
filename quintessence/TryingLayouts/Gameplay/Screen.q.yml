@@ -110,10 +110,28 @@ methods:
       current_cursor_destination = layout.get_initial_cursor_destination();
       set_selection_cursor_box_to_new_position();
 
+      // Wire up behavior
+      wire_up_cursor_destination_activation_behavior();
+
       initialized = true;
       return;
     body_dependency_symbols:
       - al_is_primitives_addon_initialized
+
+
+  - name: wire_up_cursor_destination_activation_behavior
+    body: |
+       layout.set_cursor_destinations_behavior({
+          { "exit_game", {
+             [this](){
+                // On activate
+                event_emitter->emit_exit_game_event();
+             },
+             {}, // On focus
+             {}, // On blur
+          }},
+       });
+       return;
 
 
   - name: move_cursor_to
@@ -351,6 +369,7 @@ methods:
          || virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_MENU
          )
       {
+         if (current_cursor_destination->on_activation) current_cursor_destination->on_activation();
          //select_menu_option();
       }
       if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_X)

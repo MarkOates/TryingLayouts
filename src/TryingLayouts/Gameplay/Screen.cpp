@@ -176,7 +176,25 @@ void Screen::initialize()
    current_cursor_destination = layout.get_initial_cursor_destination();
    set_selection_cursor_box_to_new_position();
 
+   // Wire up behavior
+   wire_up_cursor_destination_activation_behavior();
+
    initialized = true;
+   return;
+}
+
+void Screen::wire_up_cursor_destination_activation_behavior()
+{
+   layout.set_cursor_destinations_behavior({
+      { "exit_game", {
+         [this](){
+            // On activate
+            event_emitter->emit_exit_game_event();
+         },
+         {}, // On focus
+         {}, // On blur
+      }},
+   });
    return;
 }
 
@@ -392,6 +410,7 @@ void Screen::virtual_control_button_down_func(AllegroFlare::Player* player, Alle
       || virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_MENU
       )
    {
+      if (current_cursor_destination->on_activation) current_cursor_destination->on_activation();
       //select_menu_option();
    }
    if (virtual_controller_button_num == VirtualControllers::GenericController::BUTTON_X)
