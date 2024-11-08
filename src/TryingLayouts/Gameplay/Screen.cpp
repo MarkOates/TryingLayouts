@@ -284,15 +284,14 @@ void Screen::on_deactivate()
 
 void Screen::update()
 {
-   //layout.update(); // Update on a layout?
-   static int counter = 0;
-   //counter++;
-   //if (counter > 50)
-   //{
-      //layout_camera_2d.position.x -= 1920.0;
-      //counter = 0;
-   //}
    layout_cursor_selection_box.update();
+
+   layout_camera_2d.position.x = -layout_cursor_selection_box.get_position().x;
+   layout_camera_2d.position.y = -layout_cursor_selection_box.get_position().y;
+
+   layout_camera_2d.position.x = (int)(layout_camera_2d.position.x / 1920) * 1920;
+   layout_camera_2d.position.y = (int)(layout_camera_2d.position.y / 1080) * 1080;
+
    return;
 }
 

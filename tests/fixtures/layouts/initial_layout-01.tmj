@@ -354,6 +354,11 @@
                          "name":"move_down_to_target_id",
                          "type":"object",
                          "value":15
+                        }, 
+                        {
+                         "name":"move_right_to_target_id",
+                         "type":"object",
+                         "value":25
                         }],
                  "rotation":0,
                  "type":"cursor_destination",
@@ -367,11 +372,6 @@
                  "id":15,
                  "name":"",
                  "properties":[
-                        {
-                         "name":"move_right_to_target_id",
-                         "type":"object",
-                         "value":25
-                        }, 
                         {
                          "name":"move_up_to_target_id",
                          "type":"object",
@@ -397,7 +397,7 @@
                         {
                          "name":"move_left_to_target_id",
                          "type":"object",
-                         "value":15
+                         "value":14
                         }],
                  "rotation":0,
                  "type":"cursor_destination",
