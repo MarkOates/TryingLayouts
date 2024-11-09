@@ -444,7 +444,7 @@
                 {
                  "height":108,
                  "id":15,
-                 "name":"exit_game",
+                 "name":"5",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -498,7 +498,7 @@
                 {
                  "height":108,
                  "id":26,
-                 "name":"",
+                 "name":"6",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -525,7 +525,7 @@
                 {
                  "height":108,
                  "id":29,
-                 "name":"",
+                 "name":"9",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -552,7 +552,7 @@
                 {
                  "height":108,
                  "id":38,
-                 "name":"exit_game",
+                 "name":"8",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -584,7 +584,7 @@
                 {
                  "height":108,
                  "id":39,
-                 "name":"exit_game",
+                 "name":"7",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -611,7 +611,7 @@
                 {
                  "height":108,
                  "id":40,
-                 "name":"exit_game",
+                 "name":"4",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -638,7 +638,7 @@
                 {
                  "height":108,
                  "id":41,
-                 "name":"exit_game",
+                 "name":"1",
                  "properties":[
                         {
                          "name":"move_down_to_target_id",
@@ -660,7 +660,7 @@
                 {
                  "height":108,
                  "id":42,
-                 "name":"exit_game",
+                 "name":"clear",
                  "properties":[
                         {
                          "name":"move_right_to_target_id",
@@ -683,7 +683,7 @@
                 {
                  "height":108,
                  "id":43,
-                 "name":"exit_game",
+                 "name":"submit",
                  "properties":[
                         {
                          "name":"move_left_to_target_id",
@@ -710,7 +710,7 @@
                 {
                  "height":108,
                  "id":44,
-                 "name":"exit_game",
+                 "name":"exit",
                  "properties":[
                         {
                          "name":"move_left_to_target_id",
@@ -731,7 +731,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

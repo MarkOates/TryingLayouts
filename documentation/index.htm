@@ -596,8 +596,8 @@ table td
   <td class="property">TryingLayouts::Gameplay::Level*</td>
 </tr>
 <tr>
-  <td class="property">puzzle__connected_texts</td>
-  <td class="property">std::vector&lt;void*&gt;</td>
+  <td class="property">puzzle__numbers_pressed</td>
+  <td class="property">std::string</td>
 </tr>
 <tr>
   <td class="property">initialized</td>
@@ -617,6 +617,18 @@ table td
 <tr>
   <td class="method">void</td>
   <td class="method"><b>initialize</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>puzzle__press_number_key</b>(std::string number_str=&quot;[unset-number_str]&quot;)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>puzzle__submit_puzzle_solution</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>puzzle__clear</b>()</td>
 </tr>
 <tr>
   <td class="method">void</td>

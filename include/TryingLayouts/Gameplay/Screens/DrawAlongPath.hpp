@@ -17,7 +17,6 @@
 #include <TryingLayouts/Gameplay/Level.hpp>
 #include <allegro5/allegro.h>
 #include <string>
-#include <vector>
 
 
 namespace TryingLayouts
@@ -45,7 +44,7 @@ namespace TryingLayouts
             AllegroFlare::Layouts::Elements::CursorDestination* current_cursor_destination;
             std::string current_level_identifier;
             TryingLayouts::Gameplay::Level* current_level;
-            std::vector<void*> puzzle__connected_texts;
+            std::string puzzle__numbers_pressed;
             bool initialized;
 
          protected:
@@ -66,6 +65,9 @@ namespace TryingLayouts
             bool get_initialized() const;
             AllegroFlare::AssetStudio::Database* &get_asset_studio_database_ref();
             void initialize();
+            void puzzle__press_number_key(std::string number_str="[unset-number_str]");
+            void puzzle__submit_puzzle_solution();
+            void puzzle__clear();
             void wire_up_cursor_destination_activation_behavior();
             void move_cursor_to(int target_tmj_object_id=0);
             void move_cursor_up();

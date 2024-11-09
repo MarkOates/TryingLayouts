@@ -66,9 +66,9 @@ properties:
     type: TryingLayouts::Gameplay::Level*
     init_with: nullptr
 
-  - name: puzzle__connected_texts
-    type: std::vector<void*>
-    init_with: '{}'
+  - name: puzzle__numbers_pressed
+    type: std::string
+    init_with: '""'
 
   - name: initialized
     type: bool
@@ -123,16 +123,64 @@ methods:
       - al_is_primitives_addon_initialized
 
 
+  - name: puzzle__press_number_key
+    parameters:
+      - name: number_str
+        type: std::string
+        default_argument: '"[unset-number_str]"'
+    body: |
+      puzzle__numbers_pressed += number_str;
+      return;
+
+
+  - name: puzzle__submit_puzzle_solution
+    body: |
+      bool puzzle_solved = false;
+      if (puzzle__numbers_pressed == "1") puzzle_solved = true;
+
+      if (puzzle_solved)
+      {
+         event_emitter->emit_exit_game_event();
+      }
+      return;
+
+
+  - name: puzzle__clear
+    body: |
+      puzzle__numbers_pressed.clear();
+      return;
+
+
   - name: wire_up_cursor_destination_activation_behavior
     body: |
        layout.set_cursor_destinations_behavior({
-          { "exit_game", {
+          // number buttons
+
+          { "1", {
+             [this](){
+                puzzle__press_number_key("1");
+             }, {} /* On focus */, {} /* On blur */,
+          }},
+
+          // ui buttons
+
+          { "clear", {
+             [this](){
+                puzzle__clear();
+             }, {} /* On focus */, {} /* On blur */,
+          }},
+          { "submit", {
+             [this](){
+                // On activate
+                puzzle__submit_puzzle_solution();
+                //event_emitter->emit_exit_game_event();
+             }, {} /* On focus */, {} /* On blur */,
+          }},
+          { "exit", {
              [this](){
                 // On activate
                 event_emitter->emit_exit_game_event();
-             },
-             {}, // On focus
-             {}, // On blur
+             }, {} /* On focus */, {} /* On blur */,
           }},
        });
        return;

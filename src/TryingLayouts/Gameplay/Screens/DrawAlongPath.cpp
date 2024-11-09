@@ -32,7 +32,7 @@ DrawAlongPath::DrawAlongPath()
    , current_cursor_destination(nullptr)
    , current_level_identifier("[unset-current_level]")
    , current_level(nullptr)
-   , puzzle__connected_texts({})
+   , puzzle__numbers_pressed("")
    , initialized(false)
 {
 }
@@ -186,16 +186,60 @@ void DrawAlongPath::initialize()
    return;
 }
 
+void DrawAlongPath::puzzle__press_number_key(std::string number_str)
+{
+   puzzle__numbers_pressed += number_str;
+   return;
+}
+
+void DrawAlongPath::puzzle__submit_puzzle_solution()
+{
+   bool puzzle_solved = false;
+   if (puzzle__numbers_pressed == "1") puzzle_solved = true;
+
+   if (puzzle_solved)
+   {
+      event_emitter->emit_exit_game_event();
+   }
+   return;
+}
+
+void DrawAlongPath::puzzle__clear()
+{
+   puzzle__numbers_pressed.clear();
+   return;
+}
+
 void DrawAlongPath::wire_up_cursor_destination_activation_behavior()
 {
    layout.set_cursor_destinations_behavior({
-      { "exit_game", {
+      // number buttons
+
+      { "1", {
+         [this](){
+            puzzle__press_number_key("1");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+
+      // ui buttons
+
+      { "clear", {
+         [this](){
+            puzzle__clear();
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "submit", {
+         [this](){
+            // On activate
+            puzzle__submit_puzzle_solution();
+            //event_emitter->emit_exit_game_event();
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "exit", {
          [this](){
             // On activate
             event_emitter->emit_exit_game_event();
-         },
-         {}, // On focus
-         {}, // On blur
+         }, {} /* On focus */, {} /* On blur */,
       }},
    });
    return;
