@@ -84,9 +84,6 @@ TEST_F(TryingLayouts_Gameplay_Screens_DrawAlongPathTestWithAllegroFrameworksFull
 }
 
 
-// puzzle__connected_texts
-
-
 /*
 
    void move_cursor_up(AllegroFlare::Layouts::Layout &cursor_map)

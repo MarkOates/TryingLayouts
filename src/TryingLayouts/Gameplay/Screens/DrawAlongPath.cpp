@@ -216,6 +216,8 @@ void DrawAlongPath::puzzle__clear()
 
 void DrawAlongPath::wire_up_cursor_destination_activation_behavior()
 {
+   layout.set_text_data_field("title_text", "BIRTHDAY");
+
    layout.set_cursor_destinations_behavior({
       // number buttons
 

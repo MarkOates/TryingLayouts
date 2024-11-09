@@ -158,6 +158,8 @@ methods:
 
   - name: wire_up_cursor_destination_activation_behavior
     body: |
+       layout.set_text_data_field("title_text", "BIRTHDAY");
+
        layout.set_cursor_destinations_behavior({
           // number buttons
 
