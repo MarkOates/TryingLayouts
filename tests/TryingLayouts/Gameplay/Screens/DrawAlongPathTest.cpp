@@ -80,7 +80,7 @@ TEST_F(TryingLayouts_Gameplay_Screens_DrawAlongPathTestWithAllegroFrameworksFull
 
    framework_register_and_activate_screen("screen", &screen);
 
-   framework_run_loop(3);
+   framework_run_loop(60);
 }
 
 

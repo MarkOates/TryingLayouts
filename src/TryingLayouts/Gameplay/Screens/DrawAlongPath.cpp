@@ -171,7 +171,7 @@ void DrawAlongPath::initialize()
 
    layout.set_bitmap_bin(bitmap_bin);
    layout.set_font_bin(font_bin);
-   layout.set_tmj_filename(data_folder_path + "layouts/" + "along_a_path-01.tmj");
+   layout.set_tmj_filename(data_folder_path + "layouts/" + "along_a_path_10_digits-01.tmj");
    layout.set_scale(1);
    layout.initialize();
 
@@ -195,10 +195,11 @@ void DrawAlongPath::puzzle__press_number_key(std::string number_str)
 void DrawAlongPath::puzzle__submit_puzzle_solution()
 {
    bool puzzle_solved = false;
-   if (puzzle__numbers_pressed == "1") puzzle_solved = true;
+   if (puzzle__numbers_pressed == "041196") puzzle_solved = true;
 
    if (puzzle_solved)
    {
+      std::cout << "Puzzle solved!" << std::endl;
       event_emitter->emit_exit_game_event();
    }
    return;
@@ -215,9 +216,54 @@ void DrawAlongPath::wire_up_cursor_destination_activation_behavior()
    layout.set_cursor_destinations_behavior({
       // number buttons
 
+      { "0", {
+         [this](){
+            puzzle__press_number_key("0");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
       { "1", {
          [this](){
             puzzle__press_number_key("1");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "2", {
+         [this](){
+            puzzle__press_number_key("2");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "3", {
+         [this](){
+            puzzle__press_number_key("3");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "4", {
+         [this](){
+            puzzle__press_number_key("4");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "5", {
+         [this](){
+            puzzle__press_number_key("5");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "6", {
+         [this](){
+            puzzle__press_number_key("6");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "7", {
+         [this](){
+            puzzle__press_number_key("7");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "8", {
+         [this](){
+            puzzle__press_number_key("8");
+         }, {} /* On focus */, {} /* On blur */,
+      }},
+      { "9", {
+         [this](){
+            puzzle__press_number_key("9");
          }, {} /* On focus */, {} /* On blur */,
       }},
 
