@@ -8,15 +8,30 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "/Users/markoates/Repos/TileFPS/project_files/art-gallery-tileset-01.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/markoates/Repos/TileFPS/tests/fixtures/maps/art-gallery-tileset-01.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/markoates/Repos/TileFPS/tests/fixtures/maps/gallery-map-03.tmj": {
+            "scale": 0.8089,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 520.459883792805,
+                "y": 619.3596241809865
+            }
+        },
         "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj": {
             "scale": 0.2154,
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 2516.2488393686162,
-                "y": 1474.0018570102136
+                "y": 1476.3231197771586
             }
         }
     },
+    "last.externalTilesetPath": "/Users/markoates/Repos/TileFPS/project_files",
     "map.lastUsedFormat": "json",
     "openFiles": [
         "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj"
@@ -24,6 +39,7 @@
     "project": "TryingLayouts-01.tiled-project",
     "property.type": "object",
     "recentFiles": [
+        "/Users/markoates/Repos/TileFPS/tests/fixtures/maps/gallery-map-03.tmj",
         "/Users/markoates/Repos/TryingLayouts/tests/fixtures/layouts/initial_layout-01.tmj"
     ]
 }

@@ -58,6 +58,7 @@ table td
   <li><a href="#quintessence/TryingLayouts/GameProgressAndStateInfo.q.yml">quintessence/TryingLayouts/GameProgressAndStateInfo.q.yml</a></li>
   <li><a href="#quintessence/TryingLayouts/Gameplay/Level.q.yml">quintessence/TryingLayouts/Gameplay/Level.q.yml</a></li>
   <li><a href="#quintessence/TryingLayouts/Gameplay/Screen.q.yml">quintessence/TryingLayouts/Gameplay/Screen.q.yml</a></li>
+  <li><a href="#quintessence/TryingLayouts/Gameplay/Screens/DrawAlongPath.q.yml">quintessence/TryingLayouts/Gameplay/Screens/DrawAlongPath.q.yml</a></li>
 </ul>
 <h1>Components</h1>
 <br><br><br>
@@ -538,6 +539,224 @@ table td
     </table>
 </div>  </div>
 </ul>
+<br><br><br>
+<br><br><br>
+<ul>
+  <div class="component">
+    <h3 id="quintessence/TryingLayouts/Gameplay/Screens/DrawAlongPath.q.yml">quintessence/TryingLayouts/Gameplay/Screens/DrawAlongPath.q.yml</h3>
+    <p>(This component does not include supplementary documentation)</p>
+    <h3>Properties</h3>
+<div class="property-box properties">     <table>
+<tr>
+  <td class="property">data_folder_path</td>
+  <td class="property">std::string</td>
+</tr>
+<tr>
+  <td class="property">asset_studio_database</td>
+  <td class="property">AllegroFlare::AssetStudio::Database*</td>
+</tr>
+<tr>
+  <td class="property">event_emitter</td>
+  <td class="property">AllegroFlare::EventEmitter*</td>
+</tr>
+<tr>
+  <td class="property">bitmap_bin</td>
+  <td class="property">AllegroFlare::BitmapBin*</td>
+</tr>
+<tr>
+  <td class="property">font_bin</td>
+  <td class="property">AllegroFlare::FontBin*</td>
+</tr>
+<tr>
+  <td class="property">model_bin</td>
+  <td class="property">AllegroFlare::ModelBin*</td>
+</tr>
+<tr>
+  <td class="property">layout_camera_2d</td>
+  <td class="property">AllegroFlare::Camera2D</td>
+</tr>
+<tr>
+  <td class="property">layout</td>
+  <td class="property">AllegroFlare::Layouts::Layout</td>
+</tr>
+<tr>
+  <td class="property">layout_cursor_selection_box</td>
+  <td class="property">AllegroFlare::Elements::SelectionCursorBox</td>
+</tr>
+<tr>
+  <td class="property">current_cursor_destination</td>
+  <td class="property">AllegroFlare::Layouts::Elements::CursorDestination*</td>
+</tr>
+<tr>
+  <td class="property">current_level_identifier</td>
+  <td class="property">std::string</td>
+</tr>
+<tr>
+  <td class="property">current_level</td>
+  <td class="property">TryingLayouts::Gameplay::Level*</td>
+</tr>
+<tr>
+  <td class="property">puzzle__connected_texts</td>
+  <td class="property">std::vector&lt;void*&gt;</td>
+</tr>
+<tr>
+  <td class="property">initialized</td>
+  <td class="property">bool</td>
+</tr>
+<tr>
+  <td class="property">DEFAULT_DATA_FOLDER_PATH</td>
+  <td class="property">char*</td>
+</tr>
+<tr>
+  <td class="property">TYPE</td>
+  <td class="property">char*</td>
+</tr>
+    </table>
+</div>    <h3>Methods</h3>
+<div class="property-box methods">     <table>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>initialize</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>wire_up_cursor_destination_activation_behavior</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_to</b>(int target_tmj_object_id=0)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_up</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_down</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_left</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>move_cursor_right</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>set_selection_cursor_box_to_new_position</b>()</td>
+</tr>
+<tr>
+  <td class="method">bool</td>
+  <td class="method"><b>load_level_by_identifier</b>(std::string level_identifier=&quot;[unset-level_identifier]&quot;)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>on_activate</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>on_deactivate</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>update</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>render</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>game_event_func</b>(AllegroFlare::GameEvent* game_event=nullptr)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>primary_update_func</b>(double time_now=0.0f, double delta_time=1.0f)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>primary_render_func</b>()</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>virtual_control_button_up_func</b>(AllegroFlare::Player* player=nullptr, AllegroFlare::VirtualControllers::Base* virtual_controller=nullptr, int virtual_controller_button_num=0, bool is_repeat=false)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>virtual_control_button_down_func</b>(AllegroFlare::Player* player=nullptr, AllegroFlare::VirtualControllers::Base* virtual_controller=nullptr, int virtual_controller_button_num=0, bool is_repeat=false)</td>
+</tr>
+<tr>
+  <td class="method">void</td>
+  <td class="method"><b>virtual_control_axis_change_func</b>(ALLEGRO_EVENT* ev=nullptr)</td>
+</tr>
+<tr>
+  <td class="method">ALLEGRO_FONT*</td>
+  <td class="method"><b>obtain_font</b>()</td>
+</tr>
+    </table>
+</div>    <h3>Dependencies</h3>
+<div class="property-box dependencies">     <table>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;ALLEGRO_FONT&quot;, &quot;headers&quot;=&gt;[&quot;allegro5/allegro.h&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;ALLEGRO_EVENT&quot;, &quot;headers&quot;=&gt;[&quot;allegro5/allegro.h&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Screens::Gameplay&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Screens/Gameplay.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::BitmapBin&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/BitmapBin.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::EventEmitter&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/EventEmitter.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::FontBin&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/FontBin.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::ModelBin&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/ModelBin.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;al_is_primitives_addon_initialized&quot;, &quot;headers&quot;=&gt;[&quot;allegro5/allegro_primitives.h&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Player&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Player.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::VirtualControllers::Base&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/VirtualControllers/Base.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::VirtualControllers::GenericController&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/VirtualControllers/GenericController.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;TryingLayouts::Gameplay::Screen&quot;, &quot;headers&quot;=&gt;[&quot;TryingLayouts/Gameplay/Screen.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;TryingLayouts::Gameplay::Level&quot;, &quot;headers&quot;=&gt;[&quot;TryingLayouts/Gameplay/Level.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::GameEvent&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/GameEvent.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::AssetStudio::Database&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/AssetStudio/Database.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Layouts::Layout&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Layouts/Layout.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Camera2D&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Camera2D.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Elements::SelectionCursorBox&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Elements/SelectionCursorBox.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Layouts::Elements::CursorDestination&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Layouts/Elements/CursorDestination.hpp&quot;]}</td>
+</tr>
+    </table>
+</div>  </div>
+</ul>
 <h1>Dependents</h1>
 <pre>
 {
@@ -571,7 +790,8 @@ table td
   ],
   "TryingLayouts/Gameplay/Level": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Achievement": [
     "TryingLayouts/Game/Configurations/Main"
@@ -591,11 +811,13 @@ table td
   ],
   "TryingLayouts/Gameplay/Screen": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Screens/Gameplay": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Runners/Complete": [
     "TryingLayouts/Game/Configurations/Main"
@@ -611,7 +833,8 @@ table td
   ],
   "AllegroFlare/GameEvent": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Screens/PauseScreen": [
     "TryingLayouts/Game/Configurations/Main"
@@ -623,49 +846,64 @@ table td
     "TryingLayouts/GameProgressAndStateInfo"
   ],
   "ALLEGRO_FONT": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "ALLEGRO_EVENT": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/BitmapBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/EventEmitter": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/FontBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/ModelBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "al_is_primitives_addon_initialized": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Player": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/VirtualControllers/Base": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/VirtualControllers/GenericController": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/AssetStudio/Database": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Layouts/Layout": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Camera2D": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Elements/SelectionCursorBox": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Layouts/Elements/CursorDestination": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ]
 }
 </pre>

@@ -29,7 +29,8 @@
   ],
   "TryingLayouts/Gameplay/Level": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Achievement": [
     "TryingLayouts/Game/Configurations/Main"
@@ -49,11 +50,13 @@
   ],
   "TryingLayouts/Gameplay/Screen": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Screens/Gameplay": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Runners/Complete": [
     "TryingLayouts/Game/Configurations/Main"
@@ -69,7 +72,8 @@
   ],
   "AllegroFlare/GameEvent": [
     "TryingLayouts/Game/Configurations/Main",
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Screens/PauseScreen": [
     "TryingLayouts/Game/Configurations/Main"
@@ -81,48 +85,63 @@
     "TryingLayouts/GameProgressAndStateInfo"
   ],
   "ALLEGRO_FONT": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "ALLEGRO_EVENT": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/BitmapBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/EventEmitter": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/FontBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/ModelBin": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "al_is_primitives_addon_initialized": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Player": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/VirtualControllers/Base": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/VirtualControllers/GenericController": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/AssetStudio/Database": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Layouts/Layout": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Camera2D": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Elements/SelectionCursorBox": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ],
   "AllegroFlare/Layouts/Elements/CursorDestination": [
-    "TryingLayouts/Gameplay/Screen"
+    "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ]
 }
