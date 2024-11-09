@@ -71,7 +71,7 @@ table td
 <div class="property-box properties">     <table>
 <tr>
   <td class="property">primary_gameplay_screen</td>
-  <td class="property">TryingLayouts::Gameplay::Screen*</td>
+  <td class="property">TryingLayouts::Gameplay::Screens::DrawAlongPath*</td>
 </tr>
 <tr>
   <td class="property">primary_gameplay_subscreen</td>
@@ -250,6 +250,9 @@ table td
 </tr>
 <tr>
   <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Screens::Subscreen::Screen&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Screens/Subscreen/Screen.hpp&quot;]}</td>
+</tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;TryingLayouts::Gameplay::Screens::DrawAlongPath&quot;, &quot;headers&quot;=&gt;[&quot;TryingLayouts/Gameplay/Screens/DrawAlongPath.hpp&quot;]}</td>
 </tr>
     </table>
 </div>  </div>
@@ -766,6 +769,9 @@ table td
 <tr>
   <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Layouts::Elements::CursorDestination&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Layouts/Elements/CursorDestination.hpp&quot;]}</td>
 </tr>
+<tr>
+  <td class="dependency">{&quot;symbol&quot;=&gt;&quot;AllegroFlare::Routers::Standard&quot;, &quot;headers&quot;=&gt;[&quot;AllegroFlare/Routers/Standard.hpp&quot;]}</td>
+</tr>
     </table>
 </div>  </div>
 </ul>
@@ -854,6 +860,9 @@ table td
   "AllegroFlare/Screens/Subscreen/Screen": [
     "TryingLayouts/Game/Configurations/Main"
   ],
+  "TryingLayouts/Gameplay/Screens/DrawAlongPath": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
   "TryingLayouts/JSONLoaders/TryingLayouts/GameProgressAndStateInfo": [
     "TryingLayouts/GameProgressAndStateInfo"
   ],
@@ -915,6 +924,9 @@ table td
   ],
   "AllegroFlare/Layouts/Elements/CursorDestination": [
     "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
+  ],
+  "AllegroFlare/Routers/Standard": [
     "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ]
 }

@@ -2,6 +2,7 @@
 
 #include <TryingLayouts/Gameplay/Screens/DrawAlongPath.hpp>
 
+#include <AllegroFlare/Routers/Standard.hpp>
 #include <AllegroFlare/VirtualControllers/GenericController.hpp>
 #include <TryingLayouts/Gameplay/Level.hpp>
 #include <allegro5/allegro_primitives.h>
@@ -200,7 +201,9 @@ void DrawAlongPath::puzzle__submit_puzzle_solution()
    if (puzzle_solved)
    {
       std::cout << "Puzzle solved!" << std::endl;
-      event_emitter->emit_exit_game_event();
+      //event_emitter->emit_exit_game_event();
+      //event_emitter->emit_game_won_event();
+      event_emitter->emit_router_event(AllegroFlare::Routers::Standard::EVENT_WIN_GAME);
    }
    return;
 }

@@ -76,6 +76,7 @@ AllegroFlare::Screens::Gameplay* Main::create_primary_gameplay_screen(AllegroFla
    // TODO: Find some way to remove the Runners::Complete dependency, consider injecting
    // the bin dependencies individually into this method
 
+   /*
    TryingLayouts::Gameplay::Screen *result = new TryingLayouts::Gameplay::Screen;
 
    result->set_data_folder_path(runner->get_framework()->get_data_folder_path());
@@ -87,6 +88,20 @@ AllegroFlare::Screens::Gameplay* Main::create_primary_gameplay_screen(AllegroFla
    result->initialize();
 
    primary_gameplay_screen = result;
+   */
+
+   TryingLayouts::Gameplay::Screens::DrawAlongPath *result = new TryingLayouts::Gameplay::Screens::DrawAlongPath;
+
+   result->set_data_folder_path(runner->get_framework()->get_data_folder_path());
+   result->set_asset_studio_database(&runner->get_framework()->get_asset_studio_database_ref());
+   result->set_font_bin(runner->get_font_bin());
+   result->set_bitmap_bin(runner->get_bitmap_bin());
+   result->set_model_bin(runner->get_model_bin());
+   result->set_event_emitter(runner->get_event_emitter());
+   result->initialize();
+
+   primary_gameplay_screen = result;
+
 
    return result;
 }

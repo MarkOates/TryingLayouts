@@ -141,9 +141,13 @@ methods:
       if (puzzle_solved)
       {
          std::cout << "Puzzle solved!" << std::endl;
-         event_emitter->emit_exit_game_event();
+         //event_emitter->emit_exit_game_event();
+         //event_emitter->emit_game_won_event();
+         event_emitter->emit_router_event(AllegroFlare::Routers::Standard::EVENT_WIN_GAME);
       }
       return;
+    body_dependency_symbols:
+      - AllegroFlare::Routers::Standard
 
 
   - name: puzzle__clear
@@ -541,3 +545,7 @@ dependencies:
     headers: [ AllegroFlare/Elements/SelectionCursorBox.hpp ]
   - symbol: AllegroFlare::Layouts::Elements::CursorDestination
     headers: [ AllegroFlare/Layouts/Elements/CursorDestination.hpp ]
+  - symbol: AllegroFlare::Routers::Standard
+    headers: [ AllegroFlare/Routers/Standard.hpp ]
+
+

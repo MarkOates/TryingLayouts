@@ -14,7 +14,7 @@
 #include <AllegroFlare/Screens/Gameplay.hpp>
 #include <AllegroFlare/Screens/PauseScreen.hpp>
 #include <AllegroFlare/Screens/Subscreen/Screen.hpp>
-#include <TryingLayouts/Gameplay/Screen.hpp>
+#include <TryingLayouts/Gameplay/Screens/DrawAlongPath.hpp>
 #include <string>
 #include <tuple>
 #include <utility>
@@ -33,7 +33,7 @@ namespace TryingLayouts
             static constexpr char* TYPE = (char*)"TryingLayouts/Game/Configurations/Main";
 
          private:
-            TryingLayouts::Gameplay::Screen* primary_gameplay_screen;
+            TryingLayouts::Gameplay::Screens::DrawAlongPath* primary_gameplay_screen;
             AllegroFlare::Screens::Subscreen::Screen* primary_gameplay_subscreen;
             AllegroFlare::Screens::PauseScreen* pause_screen;
 

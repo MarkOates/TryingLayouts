@@ -81,6 +81,9 @@
   "AllegroFlare/Screens/Subscreen/Screen": [
     "TryingLayouts/Game/Configurations/Main"
   ],
+  "TryingLayouts/Gameplay/Screens/DrawAlongPath": [
+    "TryingLayouts/Game/Configurations/Main"
+  ],
   "TryingLayouts/JSONLoaders/TryingLayouts/GameProgressAndStateInfo": [
     "TryingLayouts/GameProgressAndStateInfo"
   ],
@@ -142,6 +145,9 @@
   ],
   "AllegroFlare/Layouts/Elements/CursorDestination": [
     "TryingLayouts/Gameplay/Screen",
+    "TryingLayouts/Gameplay/Screens/DrawAlongPath"
+  ],
+  "AllegroFlare/Routers/Standard": [
     "TryingLayouts/Gameplay/Screens/DrawAlongPath"
   ]
 }
